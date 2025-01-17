@@ -5,34 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Investor Pro Hub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-image: url('img/reiProHubHero.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            height: calc(100vh - 56px); /* Adjust for navbar height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-        }
-        header h1 {
-            font-size: 4rem;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand" href="#">REI Pro Hub</a>
+            <a href="./index.html"><img width="100" src="./img/reiPHLogo.png" id=logo alt="REI Logo" /></a>
+            <a class="navbar-brand text-yellow d-none d-lg-flex" href="./index.html">REI Pro Hub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,7 +25,7 @@
                         <a class="nav-link" href="calculator.html">Investment Calculator</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="eBooks.html">E-Books</a>
+                        <a class="nav-link" href="realEstateGuides.html">Real Estate Guides</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="serviceProviderDirectory.html">Service Provider Directory</a>
@@ -56,10 +36,17 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="text-white text-center">
+    <header id="mainHero" class="text-white text-center">
         <div class="container">
+            <button type="button" class="btn btn-light" onclick="changeImage1()">Original Image</button>
+            <button type="button" class="btn btn-light" onclick="changeImage2()">AI Image 1</button>
+            <button type="button" class="btn btn-light" onclick="changeImage3()">AI Image 2</button>
             <h1>Real Estate Investor Pro Hub</h1>
             <h5>Your one-stop resource for real estate investing tools and service providers.</h5>
+            <div class="text-center mt-4 py-5">
+                <a href="#" class="btn btn-orange btn-lg">Become a Member</a>
+                <a href="#" class="btn btn-secondary btn-lg">Service Provider Sign Up</a>
+            </div>
         </div>
     </header>
 
@@ -72,9 +59,9 @@
             </div>
             </div>
 
-            <div class="bg-secondary-subtle py-5">
+            <div class="bg-black py-5">
             <div class="container text-center">
-                <h2 class="mb-4">What We Offer</h2>
+                <h2 class="mb-4 text-white">What We Offer</h2>
                     <div class="row mb-4">
                         <div class="col-sm-4">
                         <div class="card h-100">
@@ -113,7 +100,7 @@
                                     <h6 class="card-text">
                                         <ul class="list-unstyled">
                                             <li>Market insights and trends</li>
-                                            <li>Educational E-Books and guides</li>
+                                            <li>Educational Real Estate Guides and guides</li>
                                         </ul>
                                     </h6>
                                     </div>
@@ -129,8 +116,8 @@
                     <p class="mb-4">We understand the unique challenges of real estate investing. Our mission is to make the process seamless, efficient, and profitable for you. With REI Pro Hub, you’re not just investing in properties—you’re building a future.</p>
                 </div>
 
-                <div class="bg-secondary-subtle py-5">
-                <div class="container text-center">
+                <div class="bg-black py-5">
+                <div class="container text-center text-white">
                 <h2 class="mb-4">Start Your Journey Today</h2>
                 <p>Join a growing community of investors who are transforming their financial futures. Sign up now and take the first step toward smarter investing.</p>
                 </div>
@@ -140,17 +127,18 @@
                     
                     
                 <div class="text-center mt-4 py-5">
-                    <a href="member.html" class="btn btn-primary btn-lg">Become a Member</a>
+                    <a href="#" class="btn btn-orange btn-lg">Become a Member</a>
                     <a href="#" class="btn btn-secondary btn-lg">Service Provider Sign Up</a>
                 </div>
             </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="bg-black text-white text-center py-3">
         <p>&copy; Real Estate Investor Pro Hub. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Member Page - Real Estate Investor Pro Hub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand" href="#">REI Pro Hub</a>
+            <a href="./index.html"><img width="100" src="./img/reiPHLogo.png" id=logo alt="REI Logo" /></a>
+            <a class="navbar-brand text-yellow d-none d-lg-flex" href="./index.html">REI Pro Hub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,7 +25,7 @@
                         <a class="nav-link active" href="calculator.html">Investment Calculator</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="eBooks.html">E-Books</a>
+                        <a class="nav-link" href="realEstateGuides.html">Real Estate Guides</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="serviceProviderDirectory.html">Service Provider Directory</a>
@@ -35,23 +37,25 @@
 
     <!-- Main Content -->
     <section class="py-5">
-        <div class="container">
-            <!-- Calculator Section -->
-            <div class="mb-5 text-center">
-                <h2>Investment Calculator</h2>
-                <p>Use the embedded calculator below to evaluate your real estate investments.</p>
-                <iframe width="650" height="1150" frameborder="0"
-                src="https://1drv.ms/x/c/b884dd4c1487e962/EeZUVnivmyxOtG6oKAZg1ngBob057DYAs2aNiRq5B5SUyA?e=FMmxYe&action=embedview&wdbipreview=True&wdHIdeSheetTabs=True&Item=dashboard&wdHideHeaders=True&ActiveCell=C3&wdAllowInteractivity=False&AllowTyping=True&wdInConfigurator=True">
-                </iframe>
+        <!--Coming Soon-->
+        <div class="col-md-6 mb-4 py-5 mx-auto">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1 class="card-title">Investment Calculator</h1>
+                    <h3><i>Coming Soon</i></h3>
+                    <p class="card-text">Utilize our calculator to see if an investment makes financial sense.</p>
+                </div>
             </div>
         </div>
+
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="bg-black text-white text-center py-3">
         <p>&copy; Real Estate Investor Pro Hub. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
