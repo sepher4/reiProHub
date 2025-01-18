@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
         <div class="container">
             <a href="./index.html"><img width="100" src="./img/reiPHLogo.png" id=logo alt="REI Logo" /></a>
-            <a class="navbar-brand text-yellow d-none d-lg-flex" href="./index.html">REI Pro Hub</a>
+            <a class="navbar-brand text-yellow d-none d-lg-flex" href="./index.html"><strong>REI Pro Hub</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,13 +37,122 @@
 
     <!-- Main Content -->
     <section class="py-5">
-        <!--Coming Soon-->
-        <div class="col-md-6 mb-4 py-5 mx-auto">
+        <!--Calculator-->
+        <div class="col-md-6 mb-1 py-5 mx-auto">
             <div class="card">
-                <div class="card-body text-center">
-                    <h1 class="card-title">Investment Calculator</h1>
-                    <h3><i>Coming Soon</i></h3>
-                    <p class="card-text">Utilize our calculator to see if an investment makes financial sense.</p>
+                <div class="card-header">
+                    <h1 class="text-center">Investment Calculator</h1>
+                </div>
+                <div class="card-body pt-5 mx-auto container">
+                    <div class="card card-header p-2">
+                        <input type="text" name="" class="text-center" id="" placeholder="Enter Property Address">
+                    </div>
+                    <div class="p-0 card">
+                        <ul class="list-group mx-0 row-cols-2 row-cols-lg-4">
+                            <li class="list-group-item col">Bedrooms</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="1" max="100"></li>
+                            <li class="list-group-item col">Bathrooms</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="1" max="100"></li>
+                            <li class="list-group-item col">Garage</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="1" max="100"></li>
+                            <li class="list-group-item col">Estimated Monthly Rent</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.01" step="0.01"></li>
+                            <li class="list-group-item col">Yearly Insurance</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Yearly Taxes</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Yearly HOA</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">AR</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card-body pt-5 mx-auto container">
+                    <div class="card card-header p-2">
+                        <h4 class="text-center">Renovation Budget</h4>
+                    </div>
+                    <div class="p-0 card">
+                        <ul class="list-group mx-0 row-cols-2 row-cols-lg-4">
+                            <li class="list-group-item col">Demolition</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="1" max="100"></li>
+                            <li class="list-group-item col">Foundation</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="1" max="100"></li>
+                            <li class="list-group-item col">Roofing / Exterior</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="1" max="100"></li>
+                            <li class="list-group-item col">Framing</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.01" step="0.01"></li>
+                            <li class="list-group-item col">Electrical</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Windows</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Plumbing</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">HVAC</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Drywall / Insulation</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Interior / Ext. Trim & Doors</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Paint</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Bathrooms</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Kitchen</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Flooring</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Appliances</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Garage</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Concrete / Driveway</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col">Landscaping</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col"><input type="text" name="" class="text-center" id="" placeholder="Misc."></li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                            <li class="list-group-item col"><input type="text" name="" class="text-center" id="" placeholder="Misc."></li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="0.1" step="0.1"></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <ul class="list-group row-cols-2">
+                            <li class="list-group-item col"><h5>Reno Total:</h5></li>
+                            <li class="list-group-item col"><h5>$1,000,000.00</h5</li>
+                        </ul> 
+                    </div>
+                </div>
+
+                <div class="card-body pt-5 mx-auto container">
+                    <div class="card card-header p-2">
+                        <h4 class="text-center">Hard Money / PML</h4>
+                    </div>
+                    <div class="p-0 card">
+                        <ul class="list-group mx-0 row-cols-2 row-cols-lg-4">
+                            <li class="list-group-item col">Down Payment Percent</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="1" max="100"></li>
+                            <li class="list-group-item col">Appraisal</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="1" max="100"></li>
+                            <li class="list-group-item col">Document Fees</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="1" max="100"></li>
+                            <li class="list-group-item col">Interest Rate</li>
+                            <li class="list-group-item col"><input type="number" name="" class="input-orange" id="" min="1" max="100"></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <ul class="list-group row-cols-2">
+                            <li class="list-group-item col"><h5>Down Payment Amount:</h5></li>
+                            <li class="list-group-item col"><h5>$1,000,000.00</h5></li>
+                            <li class="list-group-item col"><h5>Total To Close</h5></li>
+                            <li class="list-group-item col"><h5>$1,000,000.00</h5></li>
+                            <li class="list-group-item col"><h5>Loan Amount</h5></li>
+                            <li class="list-group-item col"><h5>$1,000,000.00</h5></li>
+                            <li class="list-group-item col"><h5>Monthly Payment</h5></li>
+                            <li class="list-group-item col"><h5>$1,000,000.00</h5></li>
+                        </ul> 
+                    </div>
                 </div>
             </div>
         </div>
