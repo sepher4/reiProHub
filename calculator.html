@@ -17,7 +17,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto text-end">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -36,8 +36,352 @@
     </nav>
 
     <!-- Main Content -->
-    <section class="py-5">
+    <section class="py-5 container">
         <!--Calculator-->
+        <div class="card text-center" id="iCalc">
+            <div class="card-header">
+                <h2>Investment Calculator</h2>
+            </div>
+            <div class="container card-body">
+                <div class="">
+                    <div class="">
+                        <div class="">
+                            <input type="text" class="form-control form-control-lg text-center mb-3" id="propAddress" placeholder="Property Address">
+                        </div>
+                        <div class="row row-cols-1 row-cols-lg-2 flex-column g-3" id="propCalcBody">
+
+                            <!-- Property Info -->
+                            <div class="col">
+                                <div class="card-header border">
+                                    <h4>Property Info</h4>
+                                </div>
+                                <form class="card-body row row-cols-1 row-cols-md-2 m-0 border rounded-bottom">
+                                    <div class="col row my-1">
+                                        <label for="bedrooms" class="form-label col">Bedrooms</label>
+                                        <input type="number" class="form-control form-control-sm col" id="bedrooms">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="bathrooms" class="form-label col">Bathrooms</label>
+                                        <input type="number" class="form-control form-control-sm col" id="bathrooms">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="sqFt" class="form-label col">Square Footage</label>
+                                        <input type="number" class="form-control form-control-sm col" id="sqFt">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="garage" class="form-label col">Garage</label>
+                                        <input type="number" class="form-control form-control-sm col" id="garage">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="rent" class="form-label col">Estimated Monthly Rent</label>
+                                        <input type="number" class="form-control form-control-sm col" id="rent">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="yInsurance" class="form-label col">Yearly Insurance</label>
+                                        <input type="number" class="form-control form-control-sm col" id="yInsurance">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="yTaxes" class="form-label col">Yearly Taxes</label>
+                                        <input type="number" class="form-control form-control-sm col" id="yTaxes">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="hoa" class="form-label col">Yearly HOA</label>
+                                        <input type="number" class="form-control form-control-sm col" id="hoa">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="arv" class="form-label col">ARV</label>
+                                        <input type="number" class="form-control form-control-sm col" id="arv">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Reno Budget -->
+                            <div class="col">
+                                <div class="card-header border">
+                                    <h4>Renovation Budget</h4>
+                                </div>
+                                <form class="card-body row row-cols-1 row-cols-md-2 m-0 border">
+                                    <div class="col row my-1">
+                                        <label for="demo" class="form-label col">Demoliton</label>
+                                        <input type="number" class="form-control form-control-sm col" id="demo">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="foundation" class="form-label col">Foundation</label>
+                                        <input type="number" class="form-control form-control-sm col" id="foundation">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="ext" class="form-label col">Roofing / Exterior</label>
+                                        <input type="number" class="form-control form-control-sm col" id="ext">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="frame" class="form-label col">Framing</label>
+                                        <input type="number" class="form-control form-control-sm col" id="frame">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="elec" class="form-label col">Electrical</label>
+                                        <input type="number" class="form-control form-control-sm col" id="elec">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="window" class="form-label col">Windows</label>
+                                        <input type="number" class="form-control form-control-sm col" id="window">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="plumbing" class="form-label col">Plumbing</label>
+                                        <input type="number" class="form-control form-control-sm col" id="plumbing">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="hvac" class="form-label col">HVAC</label>
+                                        <input type="number" class="form-control form-control-sm col" id="hvac">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="drywall" class="form-label col">Drywall / Insulation</label>
+                                        <input type="number" class="form-control form-control-sm col" id="drywall">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="door" class="form-label col">Trim & Doors</label>
+                                        <input type="number" class="form-control form-control-sm col" id="door">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="paint" class="form-label col">Paint</label>
+                                        <input type="number" class="form-control form-control-sm col" id="paint">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="bathroom" class="form-label col">Bathrooms</label>
+                                        <input type="number" class="form-control form-control-sm col" id="bathroom">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="kitchen" class="form-label col">Kitchen</label>
+                                        <input type="number" class="form-control form-control-sm col" id="kitchen">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="floor" class="form-label col">Flooring</label>
+                                        <input type="number" class="form-control form-control-sm col" id="floor">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="appliance" class="form-label col">Appliances</label>
+                                        <input type="number" class="form-control form-control-sm col" id="appliance">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="garage" class="form-label col">Garage</label>
+                                        <input type="number" class="form-control form-control-sm col" id="garage">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="concrete" class="form-label col">Concrete / Driveway</label>
+                                        <input type="number" class="form-control form-control-sm col" id="concrete">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="land" class="form-label col">Landscaping</label>
+                                        <input type="number" class="form-control form-control-sm col" id="land">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="misc1" class="form-label col">Misc.</label>
+                                        <input type="number" class="form-control form-control-sm col" id="misc1">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="misc2" class="form-label col">Misc.</label>
+                                        <input type="number" class="form-control form-control-sm col" id="misc2">
+                                    </div>
+                                </form>
+                                <div class="col text-center border rounded-bottom py-3">
+                                    <h5>Reno Total:</h5>
+                                </div>
+                            </div>
+
+                            <!-- Flip -->
+                            <div class="col">
+                                <div class="card-header border">
+                                    <h4>Fix & Flip</h4>
+                                </div>
+                                <form class="card-body row row-cols-1 row-cols-md-2 m-0 border">
+                                    <div class="col row my-1">
+                                        <label for="sPrice" class="form-label col">Sales Price</label>
+                                        <input type="number" class="form-control form-control-sm col" id="sPrice">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="purchase" class="form-label col">House Purchase Price</label>
+                                        <input type="number" class="form-control form-control-sm col" id="purchase">
+                                    </div>
+                                </form>
+                                <div class="col row row-cols-1 row-cols-md-2 text-center border rounded-bottom py-3 m-0">
+                                    <h5>Apx Closing Costs and Realtor:</h5>
+                                    <h5>Reno + House:</h5>
+                                    <h5>Net w/o Hard Money:</h5>
+                                    <h5>Net with Hard Money:</h5>
+                                </div>
+                            </div>
+
+                            <!-- Hard Money -->
+                            <div class="col">
+                                <div class="card-header border">
+                                    <h4>Hard Money / PML</h4>
+                                </div>
+                                <form class="card-body row row-cols-1 row-cols-md-2 m-0 border">
+                                    <div class="col row my-1">
+                                        <label for="down" class="form-label col">Down Payment Amount</label>
+                                        <input type="number" class="form-control form-control-sm col" id="down">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="appr" class="form-label col">Appraisal</label>
+                                        <input type="number" class="form-control form-control-sm col" id="appr">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="doc" class="form-label col">Document Fees</label>
+                                        <input type="number" class="form-control form-control-sm col" id="doc">
+                                    </div>
+                                </form>
+                                <div class="col row row-cols-1 row-cols-md-2 text-center border rounded-bottom py-3 m-0">
+                                    <h5>Down Payment Amount:</h5>
+                                    <h5>Total To Close:</h5>
+                                    <h5>Loan Amount:</h5>
+                                    <h5>Monthly Payment:</h5>
+                                </div>
+                            </div>
+
+                            <!-- Holding -->
+                            <div class="col">
+                                <div class="card-header border">
+                                    <h4>Holding Costs During Rehab</h4>
+                                </div>
+                                <form class="card-body row row-cols-1 row-cols-md-2 m-0 border">
+                                    <div class="col row my-1">
+                                        <label for="hold" class="form-label col">Holding Days</label>
+                                        <input type="number" class="form-control form-control-sm col" id="hold">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="water" class="form-label col">Water / Sewer</label>
+                                        <input type="number" class="form-control form-control-sm col" id="water">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="elec" class="form-label col">Electricity</label>
+                                        <input type="number" class="form-control form-control-sm col" id="elec">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="security" class="form-label col">Security</label>
+                                        <input type="number" class="form-control form-control-sm col" id="security">
+                                    </div>
+                                </form>
+                                <div class="col row row-cols-1 row-cols-md-2 text-center border rounded-bottom py-3 m-0">
+                                    <h5>Holding Cost:</h5>
+                                    <h5>Hard Money / PML:</h5>
+                                </div>
+                            </div>
+
+                            <!-- DSCR -->
+                            <div class="col">
+                                <div class="card-header border">
+                                    <h4>DSCR</h4>
+                                </div>
+                                <form class="card-body row row-cols-1 row-cols-md-2 m-0 border">
+                                    <div class="col row my-1">
+                                        <label for="ltv" class="form-label col">LTV</label>
+                                        <input type="number" class="form-control form-control-sm col" id="ltv">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="interest" class="form-label col">Interest Rate</label>
+                                        <input type="number" class="form-control form-control-sm col" id="interest" placeholder="%">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="years" class="form-label col">Years</label>
+                                        <input type="number" class="form-control form-control-sm col" id="years">
+                                    </div>
+                                </form>
+                                <div class="col row row-cols-1 row-cols-md-2 text-center border rounded-bottom py-3 m-0">
+                                    <h5>Loan Amount:</h5>
+                                    <h5>Payment:</h5>
+                                    <h5>Monthly Insurance:</h5>
+                                    <h5>Monthly Taxes:</h5>
+                                </div>
+                            </div>
+
+                            <!-- B&H -->
+                            <div class="col">
+                                <div class="card-header border">
+                                    <h4>Buy & Hold</h4>
+                                </div>
+                                <form class="card-body row row-cols-1 row-cols-md-2 m-0 border">
+                                    <div class="col row my-1">
+                                        <label for="monthManage" class="form-label col">Monthly Management Fees</label>
+                                        <input type="number" class="form-control form-control-sm col" id="monthManage">
+                                    </div>
+                                    <div class="col row my-1">
+                                        <label for="leaseFee" class="form-label col">Leasing Fee</label>
+                                        <input type="number" class="form-control form-control-sm col" id="leaseFee">
+                                    </div>
+                                </form>
+                                <div class="col row row-cols-1 row-cols-md-2 text-center border rounded-bottom py-3 m-0">
+                                    <h5>Monthly Maintenance:</h5>
+                                    <h5>Monthly Vacancy:</h5>
+                                </div>
+                            </div>
+
+                            <!-- Maximum Allowable Offer -->
+                            <div class="col">
+                                <div class="card-header border">
+                                    <h4>Maximum Allowable Offer</h4>
+                                </div>
+                                <form class="card-body row row-cols-1 row-cols-md-3 m-0 border">
+                                    <div class="col my-1"></div>
+                                    <div class="col row my-1">
+                                        <label for="margin" class="form-label col">Margin</label>
+                                        <input type="number" class="form-control form-control-sm col px-0" id="margin" placeholder="%">
+                                    </div>
+                                    <div class="col my-1"></div>
+                                </form>
+                                <div class="col row row-cols-1 row-cols-md-2 text-center border rounded-bottom py-3 m-0">
+                                    <h5>Fix and Flip MAO:</h5>
+                                    <h5>Buy and Hold MAO:</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        
+
+        <!-- <div class="container border py-3">
+            <div class="mb-3">
+                <h1 class="text-center border bg-light">Investment Calculator</h1>
+            </div>
+                <div class="row align-items-center border border-secondary mx-auto container">
+                    <div class="pb-2 text-center">
+                        <input type="text" name="" class="text-center" id="propAddress" placeholder="Enter Property Address">
+                    </div>
+
+                    <Property Info
+                    <div class="row border border-secondary col-md-6 m-2">
+                        <div class="pt-4 m-0">
+                            <h4 class="bg-secondary-subtle text-center">Property Info</h4>
+                        </div>
+                            <div class="col-6 py-1 mx-1 d-flex flex-row">
+                                <label for="bedrooms" class="form-label">Bedrooms</label>
+                                <input type="number" name="bedrooms" class="form-control" id="bedrooms">
+                            </div>
+                            <div class="col-6 py-1 mx-1 d-flex flex-row">
+                                <label for="bathrooms" class="form-label">Bathrooms</label>
+                                <input type="number" name="bathrooms" class="form-control" id="bathrooms">
+                            </div>
+                    </div>
+
+                    <Renovation Budget
+                    <div class="row border border-secondary col-md-6 m-2">
+                        <div class="pt-4 m-0">
+                            <h4 class="bg-secondary-subtle text-center">Renovation Budget</h4>
+                        </div>
+                            <div class="col-6 py-1 mx-1 d-flex flex-row">
+                                <label for="demo" class="form-label">Demoliton</label>
+                                <input type="number" name="demo" class="form-control" id="demo">
+                            </div>
+                            <div class="col-6 py-1 mx-1 d-flex flex-row">
+                                <label for="foundation" class="form-label">Foundation</label>
+                                <input type="number" name="foundation" class="form-control" id="foundation">
+                            </div>
+                    </div>
+                </div>
+        </div> -->
+        
+        <!--
         <div class="col-md-6 mb-1 py-5 mx-auto">
             <div class="card">
                 <div class="card-header">
@@ -156,6 +500,7 @@
                 </div>
             </div>
         </div>
+    -->
 
     </section>
 

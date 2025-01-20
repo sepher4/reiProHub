@@ -5,6 +5,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 header {
     background-size: cover;
     background-position: center;
@@ -16,53 +17,112 @@ header {
     justify-content: center;
     margin: 0;
 }
+
 #mainHero {
     background-image: url('img/hero1.jpg');
 }
+
 header h1 {
     font-size: 4rem;
     font-weight: bold;
 }
+
 section {
     flex: 1;
 }
+
 .bg-black {
     background-color: #000000;
 }
+
 .btn-orange {
     background-color: #FF4F00;
     color: white;
 }
+
 .btn-orange:hover {
     background-color: #bb3b00;
 }
+
 .text-yellow {
     color:yellow;
 }
+
 li input {
     width: 90%;
 }
+
 .list-group {
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
     align-items: center;
 }
+
 .card-footer {
     justify-content: center;
     align-items:center;
 }
+
 .input-orange {
     background-color: #ffbfa1;
     text-align: center;
 }
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
-} 
+}
+
+@media screen and  (min-width: 992px) and (max-width: 1200px){
+    #iCalc {
+        height: 1650px;
+    }
+}
+
+@media screen and  (min-width: 992px) and (max-width: 1200px){
+    #propCalcBody {
+        max-height: 1550px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #iCalc {
+        height: 1600px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #propCalcBody {
+        max-height: 1500px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #iCalc {
+        height: 1500px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #propCalcBody {
+        max-height: 1400px;
+    }
+}
+
+.form-control-sm {
+    max-height: 5px;
+    align-items: center;
+}
+
+#propAddress {
+    font-weight:bolder;
+    font-size: 2em;
+}
