@@ -48,9 +48,6 @@ section {
     color:yellow;
 }
 
-li input {
-    width: 90%;
-}
 
 .list-group {
     flex-direction: row;
@@ -80,48 +77,54 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-@media screen and  (min-width: 992px) and (max-width: 1200px){
-    #iCalc {
-        height: 1800px;
-    }
-}
-
-@media screen and  (min-width: 992px) and (max-width: 1200px){
-    #propCalcBody {
-        max-height: 1700px;
-    }
-}
 
 @media screen and (min-width: 1200px) {
     #iCalc {
-        height: 1900px;
+        height: 2100px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     #propCalcBody {
-        max-height: 1700px;
+        max-height: 1800px;
     }
 }
 
 @media screen and (min-width: 1400px) {
     #iCalc {
-        height: 1900px;
+        height: 2000px;
     }
 }
 
 @media screen and (min-width: 1400px) {
     #propCalcBody {
-        max-height: 1700px;
+        max-height: 1800px;
     }
 }
 
 .form-control-sm {
-    max-height: 5px;
-    align-items: center;
+    max-height: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.input-group, .form-label {
+    padding: 2px;
 }
 
 #propAddress {
-    font-weight:bolder;
+    font-weight: bolder;
     font-size: 2em;
+}
+
+form {
+    justify-content: space-between;
+}
+
+#margin-row {
+    max-width: 50%;
+}
+
+#margin-form-row {
+    justify-content: center;
 }

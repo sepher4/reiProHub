@@ -14,7 +14,22 @@ function changeImage(e) {
     if (heroImage) {
         heroImage.style.backgroundImage = heroImageURL;
     }
-}
+};
+
+//Enter acts like tab
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        const currentElement = document.activeElement;
+        const inputs = Array.from(document.querySelectorAll("input"));
+        const currentIndex = inputs.indexOf(currentElement);
+        if (currentIndex >= 0 && currentIndex < inputs.length - 1) {
+            inputs[currentIndex + 1].focus();
+        } else if (currentIndex === inputs.length - 1) {
+            currentElement.blur();
+        }
+    }
+});
 
 /*Listen for Inputs*/
 document.getElementById("demo").addEventListener("input", calculateTotals);
@@ -79,24 +94,34 @@ document.getElementById("elecHold").addEventListener("input", calculateTotals);
 document.getElementById("elecHold").addEventListener("blur", calculateTotals);
 document.getElementById("down").addEventListener("input", calculateTotals);
 document.getElementById("down").addEventListener("blur", calculateTotals);
-document.getElementById("appr").addEventListener("blur", calculateTotals);
+document.getElementById("appr").addEventListener("input", calculateTotals);
 document.getElementById("appr").addEventListener("blur", calculateTotals);
 document.getElementById("doc").addEventListener("input", calculateTotals);
-document.getElementById("doc").addEventListener("input", calculateTotals);
+document.getElementById("doc").addEventListener("blur", calculateTotals);
 document.getElementById("interestHard").addEventListener("input", calculateTotals);
-document.getElementById("interestHard").addEventListener("input", calculateTotals);
+document.getElementById("interestHard").addEventListener("blur", calculateTotals);
 document.getElementById("ltv").addEventListener("input", calculateTotals);
-document.getElementById("ltv").addEventListener("input", calculateTotals);
+document.getElementById("ltv").addEventListener("blur", calculateTotals);
 document.getElementById("interestDSCR").addEventListener("input", calculateTotals);
-document.getElementById("interestDSCR").addEventListener("input", calculateTotals);
+document.getElementById("interestDSCR").addEventListener("blur", calculateTotals);
 document.getElementById("years").addEventListener("input", calculateTotals);
-document.getElementById("years").addEventListener("input", calculateTotals);
+document.getElementById("years").addEventListener("blur", calculateTotals);
 document.getElementById("arv").addEventListener("input", calculateTotals);
-document.getElementById("arv").addEventListener("input", calculateTotals);
+document.getElementById("arv").addEventListener("blur", calculateTotals);
 document.getElementById("rent").addEventListener("input", calculateTotals);
-document.getElementById("rent").addEventListener("input", calculateTotals);
+document.getElementById("rent").addEventListener("blur", calculateTotals);
 document.getElementById("margin").addEventListener("input", calculateTotals);
-document.getElementById("margin").addEventListener("input", calculateTotals);
+document.getElementById("margin").addEventListener("blur", calculateTotals);
+document.getElementById("monthMaintPer").addEventListener("input", calculateTotals);
+document.getElementById("monthMaintPer").addEventListener("blur", calculateTotals);
+document.getElementById("vacancyPer").addEventListener("input", calculateTotals);
+document.getElementById("vacancyPer").addEventListener("blur", calculateTotals);
+document.getElementById("monthManage").addEventListener("input", calculateTotals);
+document.getElementById("monthManage").addEventListener("blur", calculateTotals);
+document.getElementById("monthLeaseFee").addEventListener("input", calculateTotals);
+document.getElementById("monthLeaseFee").addEventListener("blur", calculateTotals);
+
+
 
 function calculateTotals() {
     const demoValue = parseFloat(document.getElementById("demo").value) || 0;
@@ -138,7 +163,12 @@ function calculateTotals() {
     const arvValue = parseFloat(document.getElementById("arv").value) || 0;
     const rentValue = parseFloat(document.getElementById("rent").value) || 0;
     const marginValue = parseFloat(document.getElementById("margin").value) || 0;
-    
+    const monthMaintPerValue = parseFloat(document.getElementById("monthMaintPer").value) || 0;
+    const vacancyPerValue = parseFloat(document.getElementById("vacancyPer").value) || 0;
+    const monthManageValue = parseFloat(document.getElementById("monthManage").value) || 0;
+    const monthLeaseFeeValue = parseFloat(document.getElementById("monthLeaseFee").value) || 0;
+
+
     const renoCalcTotal = demoValue + foundationValue + extValue + frameValue + elecValue + windowValue + plumbingValue + hvacValue + drywallValue + doorValue + paintValue + bathroomValue + kitchenValue + floorValue + applianceValue + garValue + concreteValue + landValue + misc1Value + misc2Value;
     const apxCCTotal = (sPriceValue * 0.066);
     const renoHouseTotal = renoCalcTotal + purchaseValue;
@@ -162,6 +192,10 @@ function calculateTotals() {
     const monthCashFlowTotal = rentValue - monthDSCRTotal;
     const holdMAOTotal = arvValue * (1 - (marginValue * 0.01)) - renoCalcTotal;
     const flipMAOTotal = holdMAOTotal - apxCCTotal;
+    const monthMaintTotal = rentValue * monthMaintPerValue * 0.01;
+    const monthVacancyTotal = rentValue * vacancyPerValue * 0.01;
+    const monthHoldCostTotal = monthMaintTotal + monthVacancyTotal + monthManageValue + monthLeaseFeeValue;
+
     
 
     document.getElementById("renoTotal").innerText = `${formatter.format(renoCalcTotal)}`;
@@ -185,5 +219,8 @@ function calculateTotals() {
     document.getElementById("netHard").innerText = `${formatter.format(netHardTotal)}`;
     document.getElementById("flipMAO").innerText = `${formatter.format(flipMAOTotal)}`;
     document.getElementById("holdMAO").innerText = `${formatter.format(holdMAOTotal)}`;
+    document.getElementById("monthMaint").innerText = `${formatter.format(monthMaintTotal)}`;
+    document.getElementById("monthVacancy").innerText = `${formatter.format(monthVacancyTotal)}`;
+    document.getElementById("monthHoldCost").innerText = `${formatter.format(monthHoldCostTotal)}`;
 }
 

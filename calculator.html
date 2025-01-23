@@ -46,7 +46,7 @@
             <div class="container mt-3">
                 <input type="text" class="form-control form-control-lg text-center" id="propAddress" placeholder="Enter Property Address">
             </div>
-            <div class="row row-cols-1 row-cols-lg-2 flex-column g-3 m-1" id="propCalcBody">
+            <div class="row row-cols-1 row-cols-xl-2 flex-column g-3 m-1" id="propCalcBody">
                 <!-- Property Info -->
                 <div class="col">
                     <div class="card-header border">
@@ -71,23 +71,38 @@
                         </div>
                         <div class="col row my-1">
                             <label for="rent" class="form-label col">Estimated Monthly Rent</label>
-                            <input type="number" class="form-control form-control-sm col" id="rent">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="rent">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="yInsurance" class="form-label col">Yearly Insurance</label>
-                            <input type="number" class="form-control form-control-sm col" id="yInsurance">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="yInsurance">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="yTaxes" class="form-label col">Yearly Taxes</label>
-                            <input type="number" class="form-control form-control-sm col" id="yTaxes">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="yTaxes">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="hoa" class="form-label col">Yearly HOA</label>
-                            <input type="number" class="form-control form-control-sm col" id="hoa">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="hoa">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="arv" class="form-label col">ARV</label>
-                            <input type="number" class="form-control form-control-sm col" id="arv">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="arv">
+                            </div>  
                         </div>
                     </form>
                 </div>
@@ -100,83 +115,143 @@
                     <div class="card-body row row-cols-1 row-cols-md-2 m-0 border">
                         <div class="col row my-1">
                             <label for="demo" class="form-label col">Demoliton</label>
-                            <input type="number" class="form-control form-control-sm col" id="demo">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="demo">   
+                            </div> 
                         </div>
                         <div class="col row my-1">
                             <label for="foundation" class="form-label col">Foundation</label>
-                            <input type="number" class="form-control form-control-sm col" id="foundation">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="foundation">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="ext" class="form-label col">Roofing / Exterior</label>
-                            <input type="number" class="form-control form-control-sm col" id="ext">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="ext">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="frame" class="form-label col">Framing</label>
-                            <input type="number" class="form-control form-control-sm col" id="frame">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="frame">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="elec" class="form-label col">Electrical</label>
-                            <input type="number" class="form-control form-control-sm col" id="elec">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="elec">
+                             </div>
                         </div>
                         <div class="col row my-1">
                             <label for="window" class="form-label col">Windows</label>
-                            <input type="number" class="form-control form-control-sm col" id="window">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="window">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="plumbing" class="form-label col">Plumbing</label>
-                            <input type="number" class="form-control form-control-sm col" id="plumbing">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="plumbing">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="hvac" class="form-label col">HVAC</label>
-                            <input type="number" class="form-control form-control-sm col" id="hvac">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="hvac">
+                            </div>  
                         </div>
                         <div class="col row my-1">
                             <label for="drywall" class="form-label col">Drywall / Insulation</label>
-                            <input type="number" class="form-control form-control-sm col" id="drywall">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="drywall">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="door" class="form-label col">Trim & Doors</label>
-                            <input type="number" class="form-control form-control-sm col" id="door">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="door">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="paint" class="form-label col">Paint</label>
-                            <input type="number" class="form-control form-control-sm col" id="paint">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="paint">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="bathroom" class="form-label col">Bathrooms</label>
-                            <input type="number" class="form-control form-control-sm col" id="bathroom">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="bathroom">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="kitchen" class="form-label col">Kitchen</label>
-                            <input type="number" class="form-control form-control-sm col" id="kitchen">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="kitchen">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="floor" class="form-label col">Flooring</label>
-                            <input type="number" class="form-control form-control-sm col" id="floor">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="floor">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="appliance" class="form-label col">Appliances</label>
-                            <input type="number" class="form-control form-control-sm col" id="appliance">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="appliance">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="gar" class="form-label col">Garage</label>
-                            <input type="number" class="form-control form-control-sm col" id="gar">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="gar">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="concrete" class="form-label col">Concrete / Driveway</label>
-                            <input type="number" class="form-control form-control-sm col" id="concrete">
+                            <div class="input-group col">
+                            <span class="input-group-text  form-control-sm">$</span>
+                            <input type="number" class="form-control form-control-sm" id="concrete">
+                            </div>  
                         </div>
                         <div class="col row my-1">
                             <label for="land" class="form-label col">Landscaping</label>
-                            <input type="number" class="form-control form-control-sm col" id="land">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="land">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="misc1" class="form-label col">Misc.</label>
-                            <input type="number" class="form-control form-control-sm col" id="misc1">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="misc1">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="misc2" class="form-label col">Misc.</label>
-                            <input type="number" class="form-control form-control-sm col" id="misc2">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="misc2">
+                            </div>
                         </div>
                     </div>
                     <div class="col text-center border rounded-bottom py-3">
@@ -192,19 +267,32 @@
                     <form class="card-body row row-cols-1 row-cols-md-2 m-0 border">
                         <div class="col row my-1">
                             <label for="down" class="form-label col">Down Payment Percent</label>
-                            <input type="number" class="form-control form-control-sm col" id="down" placeholder="%">
+                            <div class="input-group col">
+                                <input type="number" class="form-control form-control-sm" id="down">
+                                <span class="input-group-text  form-control-sm">%</span>
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="appr" class="form-label col">Appraisal</label>
-                            <input type="number" class="form-control form-control-sm col" id="appr">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="appr">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="doc" class="form-label col">Document Fees</label>
-                            <input type="number" class="form-control form-control-sm col" id="doc">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="doc">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="interestHard" class="form-label col">Interest Rate</label>
-                            <input type="number" class="form-control form-control-sm col" id="interestHard" placeholder="%">
+                            <div class="input-group col">
+                                <input type="number" class="form-control form-control-sm" id="interestHard">
+                                <span class="input-group-text  form-control-sm">%</span>
+                            </div>
+                            
                         </div>
                     </form>
                     <div class="col row row-cols-1 row-cols-md-2 text-center border rounded-bottom py-3 m-0">
@@ -227,15 +315,24 @@
                         </div>
                         <div class="col row my-1">
                             <label for="waterHold" class="form-label col">Water / Sewer</label>
-                            <input type="number" class="form-control form-control-sm col" id="waterHold">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm " id="waterHold">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="elecHold" class="form-label col">Electricity</label>
-                            <input type="number" class="form-control form-control-sm col" id="elecHold">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="elecHold">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="securityHold" class="form-label col">Security</label>
-                            <input type="number" class="form-control form-control-sm col" id="securityHold">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="securityHold">
+                            </div>
                         </div>
                     </form>
                     <div class="col row row-cols-1 row-cols-md-2 text-center border rounded-bottom py-3 m-0">
@@ -252,11 +349,17 @@
                     <form class="card-body row row-cols-1 row-cols-md-2 m-0 border">
                         <div class="col row my-1">
                             <label for="sPrice" class="form-label col">Sales Price</label>
-                            <input type="number" class="form-control form-control-sm col" id="sPrice">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="sPrice">
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="purchase" class="form-label col">House Purchase Price</label>
-                            <input type="number" class="form-control form-control-sm col" id="purchase">
+                            <div class="input-group col">
+                                <span class="input-group-text  form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="purchase">
+                            </div>
                         </div>
                     </form>
                     <div class="col row row-cols-1 row-cols-md-2 text-center border rounded-bottom py-3 m-0">
@@ -275,11 +378,17 @@
                     <form class="card-body row row-cols-1 row-cols-md-2 m-0 border">
                         <div class="col row my-1">
                             <label for="ltv" class="form-label col">LTV</label>
-                            <input type="number" class="form-control form-control-sm col" id="ltv">
+                            <div class="input-group col">
+                                <input type="number" class="form-control form-control-sm" id="ltv">
+                                <span class="input-group-text input-group-percent form-control-sm">%</span>
+                            </div>
                         </div>
                         <div class="col row my-1">
-                            <label for="interestDSCR" class="form-label col">Interest Rate</label>
-                            <input type="number" class="form-control form-control-sm col" id="interestDSCR" placeholder="%">
+                                <label for="interestDSCR" class="form-label col">Interest Rate</label>
+                            <div class="input-group col">
+                                <input type="number" class="form-control form-control-sm" id="interestDSCR">
+                                <span class="input-group-text input-group-percent form-control-sm">%</span>
+                            </div>
                         </div>
                         <div class="col row my-1">
                             <label for="years" class="form-label col">Years</label>
@@ -305,17 +414,38 @@
                     </div>
                     <form class="card-body row row-cols-1 row-cols-md-2 m-0 border">
                         <div class="col row my-1">
-                            <label for="monthManage" class="form-label col">Monthly Management Fees</label>
-                            <input type="number" class="form-control form-control-sm col" id="monthManage">
+                            <label for="monthMaintPer" class="form-label col">Monthly Maintenance %</label>
+                            <div class="input-group col">
+                                <input type="number" class="form-control form-control-sm col" id="monthMaintPer">
+                                <span class="input-group-text  form-control-sm">%</span>
+                            </div>
                         </div>
                         <div class="col row my-1">
-                            <label for="leaseFee" class="form-label col">Leasing Fee</label>
-                            <input type="number" class="form-control form-control-sm col" id="leaseFee">
+                            <label for="vacancyPer" class="form-label col">Vacancy %</label>
+                            <div class="input-group col">
+                                <input type="number" class="form-control form-control-sm col" id="vacancyPer">
+                                <span class="input-group-text form-control-sm">%</span>
+                            </div>
+                        </div>
+                        <div class="col row my-1">
+                            <label for="monthManage" class="form-label col">Monthly Management Fees</label>
+                            <div class="input-group col">
+                                <span class="input-group-text form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="monthManage">
+                            </div>
+                        </div>
+                        <div class="col row my-1">
+                            <label for="monthLeaseFee" class="form-label col">Monthly Leasing Fee</label>
+                            <div class="input-group col">
+                                <span class="input-group-text form-control-sm">$</span>
+                                <input type="number" class="form-control form-control-sm" id="monthLeaseFee">
+                            </div>
                         </div>
                     </form>
                     <div class="col row row-cols-1 row-cols-md-2 text-center border rounded-bottom py-3 m-0">
                         <h5>Monthly Maintenance:</h5><h5 id="monthMaint">$-</h5>
                         <h5>Monthly Vacancy:</h5><h5 id="monthVacancy">$-</h5>
+                        <h5>Total Monthly B&H Cost</h5><h5 id="monthHoldCost">$-</h5>
                     </div>
                 </div>
 
@@ -324,12 +454,14 @@
                     <div class="card-header border">
                         <h4>Maximum Allowable Offer</h4>
                     </div>
-                    <form class="card-body row row-cols-1 row-cols-md-3 m-0 border">
-                        <div class="col my-1"></div>
-                        <div class="col row my-1">
-                            <label for="margin" class="form-label col">Margin</label>
-                            <input type="number" class="form-control form-control-sm col px-0" id="margin" placeholder="%">
-                        </div>
+                    <form class="card-body row row-cols-1 m-0 border" id="margin-form-row">
+                            <div class="row my-1" id="margin-row">
+                                <label for="margin" class="form-label col">Margin</label>
+                                <div class="input-group col">
+                                    <input type="number" class="form-control form-control-sm px-0" id="margin">
+                                    <span class="input-group-text form-control-sm">%</span>
+                                </div>
+                            </div>
                         <div class="col"></div>
                     </form>
                     <div class="col row row-cols-1 row-cols-md-2 text-center border rounded-bottom py-3 m-0">
