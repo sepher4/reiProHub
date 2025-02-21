@@ -19,7 +19,11 @@ header {
 }
 
 #mainHero {
-    background-image: url('img/hero1.jpg');
+    background-image: url('./img/reiProHubHero.png');
+}
+
+.dropshadow-text {
+    text-shadow: 2px 2px 1px #000000;
 }
 
 header h1 {

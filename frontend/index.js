@@ -6,16 +6,6 @@ const formatter = new Intl.NumberFormat('en-US', {
 });
 
 
-
-/*Change Hero Image*/
-function changeImage(e) {
-    const heroImage = document.getElementById("mainHero");
-    let heroImageURL = "url('img/hero" + e + ".jpg')"
-    if (heroImage) {
-        heroImage.style.backgroundImage = heroImageURL;
-    }
-};
-
 //Enter acts like tab
 document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
@@ -96,8 +86,8 @@ document.getElementById("down").addEventListener("input", calculateTotals);
 document.getElementById("down").addEventListener("blur", calculateTotals);
 document.getElementById("appr").addEventListener("input", calculateTotals);
 document.getElementById("appr").addEventListener("blur", calculateTotals);
-document.getElementById("doc").addEventListener("input", calculateTotals);
-document.getElementById("doc").addEventListener("blur", calculateTotals);
+document.getElementById("lendFees").addEventListener("input", calculateTotals);
+document.getElementById("lendFees").addEventListener("blur", calculateTotals);
 document.getElementById("interestHard").addEventListener("input", calculateTotals);
 document.getElementById("interestHard").addEventListener("blur", calculateTotals);
 document.getElementById("ltv").addEventListener("input", calculateTotals);
@@ -155,7 +145,7 @@ function calculateTotals() {
     const securityHoldValue = parseFloat(document.getElementById("securityHold").value) || 0;
     const downValue = parseFloat(document.getElementById("down").value) || 0;
     const apprValue = parseFloat(document.getElementById("appr").value) || 0;
-    const docValue = parseFloat(document.getElementById("doc").value) || 0;
+    const lendFeesValue = parseFloat(document.getElementById("lendFees").value) || 0;
     const interestHardValue = parseFloat(document.getElementById("interestHard").value) || 0;
     const ltvValue = parseFloat(document.getElementById("ltv").value) || 0;
     const interestDSCRValue = parseFloat(document.getElementById("interestDSCR").value) || 0;
@@ -175,10 +165,10 @@ function calculateTotals() {
     const holdCostTotal = ((yInsuranceValue + yTaxesValue + hoaValue) / 365 * holdValue) + waterHoldValue + elecHoldValue + securityHoldValue;
     const netTotal = sPriceValue - apxCCTotal - renoHouseTotal - holdCostTotal;
     const downPayTotal = renoHouseTotal * downValue * 0.01;
-    const totalCloseTotal = downPayTotal + apprValue + docValue;
+    const totalCloseTotal = downPayTotal + apprValue + lendFeesValue;
     const loanAmountHMTotal = renoHouseTotal - downPayTotal;
     const monthPayTotal = interestHardValue * 0.01 * loanAmountHMTotal / 12;
-    const hardMoneyTotal = (monthPayTotal / 30 ) *  holdValue + apprValue + docValue;
+    const hardMoneyTotal = (monthPayTotal / 30 ) *  holdValue + apprValue + lendFeesValue;
     const netHardTotal = netTotal - hardMoneyTotal;
     const loanAmountDSCRTotal = arvValue * ltvValue * 0.01;
     const ratePeriod = interestDSCRValue / 12 * 0.01;
