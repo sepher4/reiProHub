@@ -63,10 +63,26 @@ document.querySelectorAll("input").forEach((input) => {
 
 // Function to ensure only valid numbers are entered
 function sanitizeNumber(input) {
-    let value = input.value.replace(/[^0-9.]/g, ""); // Remove anything that's not a number or decimal
-    if (value === "") return;
+    let cursorPosition = input.selectionStart; // Get cursor position before modifying value
+    let value = input.value;
+    
+    // Remove invalid characters (anything that’s not a number or a single dot)
+    let sanitizedValue = value.replace(/[^0-9.]/g, "");
+    
+    // Ensure there is only one decimal point
+    let parts = sanitizedValue.split('.');
+    if (parts.length > 2) {
+        sanitizedValue = parts[0] + '.' + parts.slice(1).join('');
+    }
 
-    input.value = value;
+    // Check if value actually changed
+    if (input.value !== sanitizedValue) {
+        input.value = sanitizedValue;
+
+        // Restore cursor position
+        let newCursorPosition = cursorPosition - (value.length - sanitizedValue.length);
+        input.setSelectionRange(newCursorPosition, newCursorPosition);
+    }
 }
 
 
